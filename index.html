@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html ng-app="portApp">
+    
+<head>
+    <title>Ben Sorensen | Front End Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+    
+        <nav ng-controller="navCtrl">
+            
+            <ul>
+              <li><a ng-class="{active:isActive('/')}" href="#">Home</a></li>
+              <li><a ng-class="{active:isActive('/about')}" href="#/about">About</a></li>        
+              <li><a ng-class="{active:isActive('/work')}" href="#/work">Work</a></li>
+              <li><a ng-class="{active:isActive('/contact')}" href="#/contact">Contact</a></li>
+            </ul>
+          
+        </nav>
+        
+    
+        <div class="view" ng-view ng-animate="{enter: 'animate-enter'}"></div>
+    
+    
+    
+    </div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>     
+<script src="App/app.js"></script>  
+<script src="App/controllers/controllers.js"></script>
+<script src="App/factory/factory1.js"></script>
+<script src="js/main.js"></script>
+    
+</body>
+    
+</html>
